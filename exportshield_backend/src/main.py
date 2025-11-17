@@ -4,6 +4,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from src.routes.pollution import router as pollution_router
 from src.routes.safety import router as safety_router
+from src.routes.workers import router as workers_router
+from src.routes.machinery import router as machinery_router
+from src.routes.incidents import router as incidents_router
+from src.routes.corridors import router as corridors_router
 
 
 app = FastAPI(title="MiningMitra Backend", version="1.0.0")
@@ -63,8 +67,21 @@ def health_check() -> dict:
         "timestamp": datetime.utcnow().isoformat() + "Z",
         "service": "MiningMitra Backend API",
         "environment": ENVIRONMENT,
+        "endpoints": [
+            "/api/workers",
+            "/api/machinery",
+            "/api/incidents",
+            "/api/corridors",
+            "/api/pollution",
+            "/api/safety",
+        ]
     }
 
 
+# Include all routers
 app.include_router(pollution_router)
 app.include_router(safety_router)
+app.include_router(workers_router)
+app.include_router(machinery_router)
+app.include_router(incidents_router)
+app.include_router(corridors_router)
