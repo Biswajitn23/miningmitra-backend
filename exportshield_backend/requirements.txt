@@ -10,3 +10,8 @@ h11
 idna
 sniffio
 typing-extensions
+fastapi
+uvicorn[standard]
+pydantic
+starlette
+python-multipart

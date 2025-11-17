@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes.pollution import router as pollution_router
-from routes.safety import router as safety_router
+from src.routes.pollution import router as pollution_router
+from src.routes.safety import router as safety_router
 
 
 app = FastAPI(title="MiningMitra Backend", version="1.0.0")
