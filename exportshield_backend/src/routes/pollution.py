@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Query
 
-from services.pollution_service import calculate_pollution_index
+from src.services.pollution_service import calculate_pollution_index
 
 
 router = APIRouter(prefix="/api", tags=["Pollution"])

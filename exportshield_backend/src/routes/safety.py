@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Query
 
-from services.safety_service import calculate_safety_score
+from src.services.safety_service import calculate_safety_score
 
 
 router = APIRouter(prefix="/api", tags=["Safety"])
