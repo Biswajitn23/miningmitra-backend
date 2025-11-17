@@ -1,2 +1,12 @@
 fastapi
 uvicorn
+pydantic
+starlette
+annotated-types
+anyio
+click
+colorama
+h11
+idna
+sniffio
+typing-extensions
